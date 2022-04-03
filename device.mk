@@ -130,6 +130,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctl:64
 
+# Call the MiuiCamera setup
+$(call inherit-product-if-exists, device/xiaomi/miuicamera-marble/device.mk)
+
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.7.vendor:64 \
