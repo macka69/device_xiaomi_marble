@@ -1348,7 +1348,7 @@ vendor/etc/init/ipa_fws.rc|2ee2a89c1b3e4bdd03506c67774cd0a06022e0f0
 
 # IRQ balance - from diting OS2.0.206.0.VLFMIXM
 vendor/bin/msm_irqbalance|313c3422b0dbaf7c65440bf343f2aed0679a2a4a
-vendor/etc/msm_irqbalance.conf|8394994bad2c8e32b2a04cae58b5af9c44425b6e
+vendor/etc/msm_irqbalance.conf|8394994bad2c8e32b2a04cae58b5af9c44425b6e|deae969dc77d92bc2193f6baa28a5f57a5c3e9cd
 
 # Keymaster - from diting OS2.0.206.0.VLFMIXM
 vendor/bin/hw/android.hardware.keymaster@4.1-service-qti|078af72b56954b7bbe4fc5b86e51b5a57f8bf255

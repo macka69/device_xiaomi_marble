@@ -128,6 +128,13 @@ service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     task_profiles ProcessCapacityHigh HighPerformance
     onrestart restart audioserver
 
+on property:vendor.post_boot.parsed=1
+    # IRQ Tuning
+    # IRQ 252: msm_drm
+    # IRQ 208: kgsl_3d0_irq
+    write /proc/irq/252/smp_affinity_list 2
+    write /proc/irq/208/smp_affinity_list 1
+
 on property:ro.boot.product.hardware.sku=marble
     enable vendor.nfc_hal_service
     enable secureelement-hal_1_2
