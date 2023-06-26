@@ -23,6 +23,7 @@ static const variant_info_t marble_global_info = {
     .marketname = "POCO F5",
     .model = "23049PCD8G",
     .mod_device = "marble_global",
+    .name = "marble_global",
     .build_fingerprint = FINGERPRINT_GL,
 };
 
@@ -35,6 +36,7 @@ static const variant_info_t marblein_info = {
     .marketname = "POCO F5",
     .model = "23049PCD8I",
     .mod_device = "marble_in_global",
+    .name = "marble_global",
     .build_fingerprint = FINGERPRINT_IN,
 };
 
@@ -47,6 +49,7 @@ static const variant_info_t marble_info = {
     .marketname = "Redmi Note 12 Turbo",
     .model = "23049RAD8C",
     .mod_device = "marble",
+    .name = "marble_global",
     .build_fingerprint = FINGERPRINT_CN,
 };
 
