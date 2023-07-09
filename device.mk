@@ -29,6 +29,9 @@ $(call inherit-product, vendor/xiaomi/marble/marble-vendor.mk)
 
 TARGET_BOARD_PLATFORM := taro
 
+# MiuiCamera
+$(call inherit-product-if-exists, device/xiaomi/miuicamera-marble/device.mk)
+
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
