@@ -167,6 +167,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.dumpstate@1.1.vendor
 
+# Euicc
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.telephony.euicc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.xml
+
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.xiaomi
@@ -346,6 +350,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     ApertureResMarble \
+    EuiccResMarble \
     FrameworksResMarble \
     NfcResMarble \
     SettingsProviderResMarble \
