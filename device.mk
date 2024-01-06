@@ -143,8 +143,8 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Meme Camera
 TARGET_CAMERA_USES_NEWER_HIDL_OVERRIDE_FORMAT := true
-TARGET_INCLUDES_MIUI_CAMERA := true
-$(call inherit-product-if-exists, vendor/xiaomi/camera/miuicamera.mk)
+#TARGET_INCLUDES_MIUI_CAMERA := true
+#$(call inherit-product-if-exists, vendor/xiaomi/camera/miuicamera.mk)
 
 # Camera
 PRODUCT_PACKAGES += \
