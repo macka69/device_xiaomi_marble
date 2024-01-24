@@ -176,6 +176,14 @@ function blob_fixup() {
     vendor/lib/libcodec2_vndk.stock.so)
         "${PATCHELF}" --set-soname "libcodec2_vndk.stock.so" "${2}"
         ;;
+    vendor/bin/hw/dolbycodec2 | vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service | vendor/bin/hw/vendor.dolby.media.c2@1.0-service)
+        "${PATCHELF}" --add-needed "libstagefright_foundation.so" "libstagefright_foundation-v33.so" "${2}"
+        ;;
+    vendor/bin/hw/vendor.qti.hardware.display.composer-service)
+        "${PATCHELF}" --remove-needed "libutils.so" "${2}"
+        "${PATCHELF}" --add-needed "libutils-v32.so" "${2}"
+        "${PATCHELF}" --add-needed "libutils-shim.so" "${2}"
+        ;;
     esac
 }
 

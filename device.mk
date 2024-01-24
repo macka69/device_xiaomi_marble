@@ -195,7 +195,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.allocator@4.0.vendor \
     vendor.qti.hardware.display.allocator-service \
     vendor.qti.hardware.display.composer@3.0.vendor \
-    vendor.qti.hardware.display.composer-service \
     vendor.qti.hardware.display.demura-service \
     vendor.qti.hardware.display.config-V1-ndk.vendor \
     vendor.qti.hardware.display.config-V2-ndk.vendor \
@@ -318,6 +317,9 @@ PRODUCT_PACKAGES += \
     android.hardware.security.rkp-V1-ndk.vendor \
     android.hardware.security.sharedsecret-V1-ndk_platform.vendor \
     android.hardware.security.keymint-V1-ndk_platform.vendor \
+    android.hardware.security.secureclock-V1-ndk_platform.vendor \
+    android.hardware.security.sharedsecret-V1-ndk_platform.vendor \
+    android.hardware.security.rkp-V1-ndk_platform.vendor \
     libkeymaster_messages.vendor
 
 # Keymint
@@ -617,6 +619,9 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Touchscreen
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
+# VNDK
+PRODUCT_PACKAGES += \
+    libutils-shim
 
 # USB
 PRODUCT_PACKAGES += \
