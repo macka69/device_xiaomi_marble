@@ -172,12 +172,17 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
+    android.hardware.graphics.allocator@3.0-impl \
+    android.hardware.graphics.allocator@4.0-impl \
+    android.hardware.graphics.mapper@3.0-impl-qti-display \
     android.hardware.graphics.allocator-V1-ndk \
     android.hardware.graphics.common-V3-ndk \
     android.hardware.graphics.composer@2.4.vendor \
     libgralloc.qti \
     libgui_vendor \
     libqdMetaData \
+    libtinyxml \
+    libtinyxml2 \
     vendor.display.config@1.11.vendor \
     vendor.display.config@2.0 \
     vendor.display.config@2.0.vendor \
@@ -186,6 +191,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.allocator@4.0.vendor \
     vendor.qti.hardware.display.composer@1.0.vendor \
     vendor.qti.hardware.display.composer@2.0.vendor \
+    vendor.qti.hardware.display.composer@3.0.vendor \
     vendor.qti.hardware.display.composer@3.1.vendor \
     vendor.qti.hardware.display.config-V1-ndk.vendor \
     vendor.qti.hardware.display.config-V2-ndk.vendor \
