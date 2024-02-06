@@ -178,9 +178,11 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator-V1-ndk \
     android.hardware.graphics.common-V3-ndk \
     android.hardware.graphics.composer@2.4.vendor \
+    gralloc.default \
     libgralloc.qti \
     libgui_vendor \
     libqdMetaData \
+    libqdMetaData.system \
     libtinyxml \
     libtinyxml2 \
     vendor.display.config@1.11.vendor \
