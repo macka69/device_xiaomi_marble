@@ -186,6 +186,7 @@ vendor/lib64/libpalclient.so
 vendor/lib64/libqtigefar.so
 vendor/lib64/libresampler.so
 vendor/lib64/libsndcardparser.so
+vendor/lib64/libxlog.so
 vendor/lib64/libxlog_vendor.so|69768008c66db25dcb5af1024cd73b905d9a8efd
 
 # Audio soundfx
