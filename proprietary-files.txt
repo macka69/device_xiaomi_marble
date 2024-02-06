@@ -3110,3 +3110,4 @@ system_ext/framework/vendor.qti.ims.factoryaidlservice-V1-java.jar
 
 # Macka
 vendor/lib64/soundfx/libmisoundfx.so
+vendor/lib64/libxlog.so
