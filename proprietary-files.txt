@@ -1107,7 +1107,7 @@ vendor/lib64/libmdsprpc.so|883739ce83c6e8183d115eb5968da8029f157d19
 vendor/lib64/libsdsprpc.so|18ef16a8e890a4e8459b8609989578b1babbd25c
 
 # CNE - from diting V816.0.5.0.ULFEUXM
-vendor/app/CneApp/CneApp.apk|1cfbd9e13691f722bacfaf4c26794c6bcf4c1621
+vendor/app/CneApp/CneApp.apk;REQUIRED=CneApp.libvndfwk_detect_jni.qti_vendor_symlink|1cfbd9e13691f722bacfaf4c26794c6bcf4c1621
 vendor/bin/cnd|9d797fe460cda2e79d668a47fd8d7b63daa15170
 vendor/bin/qms|c33c09624f0d8815d5970ce8a50584aa7597f68d
 vendor/etc/cne/mwqem.conf|c42ad47b34b511075e5dfb9047d32f881fe0c159
