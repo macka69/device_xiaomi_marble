@@ -383,6 +383,10 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/xiaomi
 
+# System init
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/system/bin/init.sim.restart.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/init.sim.restart.sh
+
 # System properties
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/properties/build_CN.prop:$(TARGET_COPY_OUT_ODM)/etc/build_CN.prop \
