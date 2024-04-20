@@ -97,6 +97,7 @@ BOARD_KERNEL_CMDLINE := \
     mtdoops.fingerprint=$(YAAP_VERSION)
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
+    androidboot.load_modules_parallel=true \
     androidboot.memcg=1 \
     androidboot.usbcontroller=a600000.dwc3
 
