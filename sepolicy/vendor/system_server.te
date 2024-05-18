@@ -1,0 +1,2 @@
+# Dolby
+hal_client_domain(system_server, hal_dms)allow system_server vendor_hal_citsensorservice_xiaomi_default:binder { call transfer };
