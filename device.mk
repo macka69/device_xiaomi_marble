@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2020 The LineageOS Project
+# Copyright (C) 2022-2023 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -21,7 +21,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_ven
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Inherit from the proprietary version
-$(call inherit-product, vendor/xiaomi/sm8450-common/sm8450-common-vendor.mk)
+$(call inherit-product, vendor/xiaomi/marble/marble-vendor.mk)
 
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
@@ -308,6 +308,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml
 
 # NFC / Secure Element
+TARGET_NFC_SUPPORTED_SKUS := marble
+
 PRODUCT_PACKAGES += \
     android.hardware.nfc-service.nxp \
     android.hardware.nfc@1.2.vendor \
@@ -345,6 +347,17 @@ PRODUCT_PACKAGES += \
     TelecommResCommon_Sys \
     TelephonyResCommon_Sys \
     WifiResCommon_Sys
+
+PRODUCT_PACKAGES += \
+    ApertureResMarble \
+    FrameworksResMarble \
+    NfcResMarble \
+    SettingsProviderResMarble \
+    SettingsProviderResMarbleCN \
+    SettingsResMarble \
+    SystemUIResMarble \
+    WifiResMarble \
+    WifiResMarbleCN \
 
 PRODUCT_PACKAGES += \
     DialerResXiaomi \
@@ -406,6 +419,9 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0.vendor \
 
 # Sensors
+PRODUCT_PACKAGES += \
+    marbleLightSensor
+
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.1-service.xiaomi-multihal \
     android.frameworks.sensorservice@1.0.vendor
@@ -493,6 +509,7 @@ PRODUCT_PACKAGES += \
 
 # Vendor init
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/init.marble.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.marble.rc \
     $(LOCAL_PATH)/rootdir/etc/init.qcom.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qcom.rc \
     $(LOCAL_PATH)/rootdir/etc/init.qti.kernel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qti.kernel.rc \
     $(LOCAL_PATH)/rootdir/etc/init.target.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.target.rc \

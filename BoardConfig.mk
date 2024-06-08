@@ -1,13 +1,13 @@
 #
-# Copyright (C) 2022 The LineageOS Project
+# Copyright (C) 2022-2023 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 # Inherit from the proprietary version
-include vendor/xiaomi/sm8450-common/BoardConfigVendor.mk
+include vendor/xiaomi/marble/BoardConfigVendor.mk
 
-COMMON_PATH := device/xiaomi/sm8450-common
+DEVICE_PATH := device/xiaomi/marble
 
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
@@ -79,7 +79,7 @@ MAX_VIRTUAL_DISPLAY_DIMENSION := 4096
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 
 # Filesystem
-TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/configs/config.fs
+TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/configs/config.fs
 
 # GPS
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
@@ -102,7 +102,7 @@ TARGET_KERNEL_CONFIG := \
     gki_defconfig \
     vendor/waipio_GKI.config \
     vendor/xiaomi_GKI.config \
-    vendor/$(PRODUCT_DEVICE)_GKI.config
+    vendor/marble_GKI.config
 
 BOARD_BOOT_HEADER_VERSION := 4
 BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOT_HEADER_VERSION)
@@ -121,8 +121,8 @@ BOARD_BOOTCONFIG := \
 
 # Kernel modules
 first_stage_modules := $(strip $(shell cat $(TARGET_KERNEL_SOURCE)/modules.list.msm.waipio))
-second_stage_modules := $(strip $(shell cat $(COMMON_PATH)/modules.list.second_stage))
-vendor_dlkm_exclusive_modules := $(strip $(shell cat $(COMMON_PATH)/modules.list.vendor_dlkm))
+second_stage_modules := $(strip $(shell cat $(DEVICE_PATH)/modules.list.second_stage))
+vendor_dlkm_exclusive_modules := $(strip $(shell cat $(DEVICE_PATH)/modules.list.vendor_dlkm))
 
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD += $(first_stage_modules)
 BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD += $(first_stage_modules) $(second_stage_modules)
@@ -193,7 +193,7 @@ BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := taro
 
 # Power
-TARGET_POWERHAL_MODE_EXT := $(COMMON_PATH)/power/power-mode.cpp
+TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
 
 # PowerShare
 SOONG_CONFIG_NAMESPACES += XIAOMI_POWERSHARE
@@ -201,14 +201,14 @@ SOONG_CONFIG_XIAOMI_POWERSHARE := WIRELESS_TX_ENABLE_PATH
 SOONG_CONFIG_XIAOMI_POWERSHARE_WIRELESS_TX_ENABLE_PATH := /sys/class/qcom-battery/reverse_chg_mode
 
 # Properties
-TARGET_ODM_PROP += $(COMMON_PATH)/properties/odm.prop
-TARGET_PRODUCT_PROP += $(COMMON_PATH)/properties/product.prop
-TARGET_SYSTEM_PROP += $(COMMON_PATH)/properties/system.prop
-TARGET_SYSTEM_EXT_PROP += $(COMMON_PATH)/properties/system_ext.prop
-TARGET_VENDOR_PROP += $(COMMON_PATH)/properties/vendor.prop
+TARGET_ODM_PROP += $(DEVICE_PATH)/properties/odm.prop
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/properties/product.prop
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/properties/system.prop
+TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/properties/system_ext.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/properties/vendor.prop
 
 # Recovery
-TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/recovery.fstab
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/recovery.fstab
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
@@ -217,15 +217,18 @@ BOARD_EXCLUDE_KERNEL_FROM_RECOVERY_IMAGE := true
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
+# Screen density
+TARGET_SCREEN_DENSITY := 440
+
 # Security patch level
 VENDOR_SECURITY_PATCH := 2024-05-01
 
 # Sepolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 
-SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
-SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
-BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # VINTF
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
@@ -233,15 +236,15 @@ DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 DEVICE_MANIFEST_SKUS := taro diwali cape ukee
 $(foreach sku, $(call to-upper, $(DEVICE_MANIFEST_SKUS)), \
     $(eval DEVICE_MANIFEST_$(sku)_FILES := \
-        $(COMMON_PATH)/vintf/manifest.xml \
-        $(COMMON_PATH)/vintf/manifest_xiaomi.xml \
-        $(if $(TARGET_NFC_SUPPORTED_SKUS),$(COMMON_PATH)/vintf/manifest_no_nfc.xml,) \
+        $(DEVICE_PATH)/vintf/manifest.xml \
+        $(DEVICE_PATH)/vintf/manifest_xiaomi.xml \
+        $(if $(TARGET_NFC_SUPPORTED_SKUS),$(DEVICE_PATH)/vintf/manifest_no_nfc.xml,) \
     ))
 
 ifneq ($(TARGET_NFC_SUPPORTED_SKUS),)
 ODM_MANIFEST_SKUS += $(TARGET_NFC_SUPPORTED_SKUS)
 $(foreach nfc_sku, $(call to-upper, $(TARGET_NFC_SUPPORTED_SKUS)), \
-    $(eval ODM_MANIFEST_$(nfc_sku)_FILES += $(COMMON_PATH)/vintf/manifest_nfc.xml))
+    $(eval ODM_MANIFEST_$(nfc_sku)_FILES += $(DEVICE_PATH)/vintf/manifest_nfc.xml))
 endif
 
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
@@ -249,7 +252,7 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml \
     vendor/lineage/config/device_framework_matrix.xml
 
-DEVICE_FRAMEWORK_MANIFEST_FILE += $(COMMON_PATH)/vintf/framework_manifest.xml
+DEVICE_FRAMEWORK_MANIFEST_FILE += $(DEVICE_PATH)/vintf/framework_manifest.xml
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
@@ -265,6 +268,10 @@ BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 2
 
 BOARD_MOVE_GSI_AVB_KEYS_TO_VENDOR_BOOT := true
+
+# Vibrator
+TARGET_QTI_VIBRATOR_EFFECT_LIB := libqtivibratoreffect.xiaomi
+TARGET_QTI_VIBRATOR_USE_EFFECT_STREAM := true
 
 # WiFi
 BOARD_WLAN_DEVICE := qcwcn
