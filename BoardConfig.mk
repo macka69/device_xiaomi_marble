@@ -10,7 +10,7 @@ include vendor/xiaomi/marble/BoardConfigVendor.mk
 DEVICE_PATH := device/xiaomi/marble
 
 TARGET_BUILD_FULLY_SIGN := true
-include vendor/parasite-signatures/BoardConfigSign.mk
+include vendor/parasite/signatures/BoardConfigSign.mk
 
 # A/B
 AB_OTA_UPDATER := true
