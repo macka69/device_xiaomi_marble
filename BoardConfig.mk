@@ -13,7 +13,7 @@ BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 TARGET_BUILD_FULLY_SIGN := true
-include vendor/parasite-signatures/BoardConfigSign.mk
+include vendor/parasite/signatures/BoardConfigSign.mk
 
 # A/B
 AB_OTA_UPDATER := true
