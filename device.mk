@@ -353,6 +353,7 @@ PRODUCT_PACKAGES += \
     WifiResMarbleCN \
 
 PRODUCT_PACKAGES += \
+    DeviceAsWebcamResXiaomi \
     DialerResXiaomi \
     FrameworksResTarget_Vendor \
     FrameworksResXiaomi \
