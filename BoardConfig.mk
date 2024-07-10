@@ -198,9 +198,7 @@ TARGET_BOARD_PLATFORM := taro
 TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
 
 # PowerShare
-SOONG_CONFIG_NAMESPACES += XIAOMI_POWERSHARE
-SOONG_CONFIG_XIAOMI_POWERSHARE := WIRELESS_TX_ENABLE_PATH
-SOONG_CONFIG_XIAOMI_POWERSHARE_WIRELESS_TX_ENABLE_PATH := /sys/class/qcom-battery/reverse_chg_mode
+$(call soong_config_set, XIAOMI_POWERSHARE, WIRELESS_TX_ENABLE_PATH, /sys/class/qcom-battery/reverse_chg_mode)
 
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/properties/odm.prop
