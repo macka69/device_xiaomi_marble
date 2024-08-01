@@ -1443,29 +1443,9 @@ vendor/bin/hw/vendor.qti.media.c2@1.0-service|a3a103902ba4d0d2a41f7e6d61798cf846
 vendor/bin/hw/vendor.qti.media.c2audio@1.0-service|a395d05f3004f2a5150dfd4510eed0c50d671974
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc|542d2ae2a92ee21dbb63716ff49392e8e6e433f4
 vendor/etc/init/vendor.qti.media.c2audio@1.0-service.rc|51841b9c67dd26b7fe82e24109f1e0a663a3e04a
-vendor/etc/media_cape/video_system_specs.json|1ea2e238194ca044b8c61680366f3661a5edda2c
-vendor/etc/media_codecs_cape.xml|28d0ebafd9b4cd8db5a62fe12a0d86aad143d2e3
-vendor/etc/media_codecs_diwali_v0.xml|ca7db7a209ea3e3c08e24e5f494dbe6edfc57d8d
-vendor/etc/media_codecs_diwali_v1.xml|f9b820a3f3e868a4b5464b456363a459d0d933d0
-vendor/etc/media_codecs_diwali_v2.xml|287d87df6e68e89b6d63227bf18604803654c1a8
-vendor/etc/media_codecs_performance_cape.xml|b917d0d698b8ae13610401f70aa9dc6e68fcd8dd
-vendor/etc/media_codecs_performance_diwali_v0.xml|024d8b450dd3323cf8338d7ba6b476a66b394962
-vendor/etc/media_codecs_performance_diwali_v1.xml|024d8b450dd3323cf8338d7ba6b476a66b394962
-vendor/etc/media_codecs_performance_diwali_v2.xml|93a38d1190dae400a3ad2a5934d62663e1a50b3f
-vendor/etc/media_codecs_performance_taro.xml|57eb507b345bce4033d1e97cc931221b8f404ccc
 vendor/etc/media_codecs_performance_ukee.xml|995796ff5026ad54e9591e9c88b99b95d2391625
-vendor/etc/media_codecs_taro.xml|36c6d1dcef28b420f4b9f31e0e2b2cb4959ee637
 vendor/etc/media_codecs_ukee.xml|2a98209e4853ae1c27a56f7d864e4ab56df95787
-vendor/etc/media_diwali_v0/video_system_specs.json|ea63044fb5c480185c5a5c4828b8a35febe5dddc
-vendor/etc/media_diwali_v1/video_system_specs.json|82c84319dd74dbbd4491613fde0e62bd40596965
-vendor/etc/media_diwali_v2/video_system_specs.json|82c84319dd74dbbd4491613fde0e62bd40596965
-vendor/etc/media_profiles_cape.xml|70259562b3254bfdbcc6cecefc68560a3835c915
-vendor/etc/media_profiles_diwali_v0.xml|fe3d3f3c80ad673bf6a29c57157477d460ddfffa
-vendor/etc/media_profiles_diwali_v1.xml|fe3d3f3c80ad673bf6a29c57157477d460ddfffa
-vendor/etc/media_profiles_diwali_v2.xml|126de540d6c23f44ad531154b82604b6a23bd754
-vendor/etc/media_profiles_taro.xml|31628aa6d3092927c25bfa6ee097402c69ac6445
 vendor/etc/media_profiles_ukee.xml|19060660b7111f6cb1b07cd390c894dc9610fa57
-vendor/etc/media_taro/video_system_specs.json|5a46c5ae404dd5e429954a9a1f48b7199e24f4a1
 vendor/etc/media_ukee/video_system_specs.json|1a39bd79cec43df61a85f6edbaee322dc067970c
 vendor/etc/seccomp_policy/c2audio.vendor.base-arm.policy|2887b6fed220462b413322547603ccf064175ba2
 vendor/etc/seccomp_policy/c2audio.vendor.base-arm64.policy|e708b49cbf3879a0b4ccd8d941a46c68b9408d82
@@ -2068,9 +2048,6 @@ vendor/etc/sensors/config/sns_tilt_to_wake.json
 vendor/etc/sensors/config/sx933x_0.json
 vendor/etc/sensors/config/tcs3701.json
 vendor/etc/sensors/sns_reg_config
-
-# Sensors ultrasound - from diting V816.0.5.0.ULFMIXM
-vendor/lib64/sensors.ultrasoundproximity.so|93d5b08a5086adad9f4b820b603a3220ba091aff
 
 # Sensors - SSC
 vendor/lib64/libssccalapi@2.0.so
