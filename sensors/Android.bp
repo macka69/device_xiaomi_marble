@@ -17,9 +17,6 @@ cc_binary {
     init_rc: ["sensor-notifier.rc"],
 
     srcs: [
-        "AodNotifier.cpp",
-        "LightNotifier.cpp",
-        "NonUiNotifier.cpp",
         "RawLightNotifier.cpp",
         "SensorNotifier.cpp",
         "SensorNotifierUtils.cpp",

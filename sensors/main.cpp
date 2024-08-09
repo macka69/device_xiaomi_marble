@@ -10,9 +10,6 @@
 #include <android-base/properties.h>
 #include <dlfcn.h>
 
-#include "AodNotifier.h"
-#include "LightNotifier.h"
-#include "NonUiNotifier.h"
 #include "RawLightNotifier.h"
 
 int main() {
@@ -41,20 +38,6 @@ int main() {
     } else {
         LOG(INFO) << "could not dlopen libssccalapi@2.0.so";
     }
-
-    std::unique_ptr<AodNotifier> aodNotifier = std::make_unique<AodNotifier>(manager, process_msg);
-    aodNotifier->activate();
-
-    std::unique_ptr<LightNotifier> lightNotifier;
-    if (process_msg != NULL &&
-        android::base::GetProperty("ro.vendor.sensors.notifier.light_sensors", "") != "") {
-        lightNotifier = std::make_unique<LightNotifier>(manager, process_msg);
-        lightNotifier->activate();
-    }
-
-    std::unique_ptr<NonUiNotifier> nonUiNotifier =
-            std::make_unique<NonUiNotifier>(manager, process_msg);
-    nonUiNotifier->activate();
 
     std::unique_ptr<RawLightNotifier> rawLightNotifier =
             std::make_unique<RawLightNotifier>(manager, process_msg);
