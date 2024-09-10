@@ -10,7 +10,7 @@
 
 #include "vendor_init.h"
 
-#define FINGERPRINT_GL "POCO/marble_global/marble:14/UKQ1.230804.001/V816.0.5.0.UMRMIXM:user/release-keys"
+#define FINGERPRINT_GL "POCO/marble_global/marble:14/UKQ1.230804.001/V816.0.8.0.UMRMIXM:user/release-keys"
 #define FINGERPRINT_CN "Redmi/marble/marble:14/UKQ1.230804.001/V816.0.3.0.UMRCNXM:user/release-keys"
 #define FINGERPRINT_IN "POCO/marblein/marblein:14/UKQ1.230804.001/V816.0.8.0.UMRINXM:user/release-keys"
 
