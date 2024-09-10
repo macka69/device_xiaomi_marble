@@ -15,6 +15,8 @@ DEVICE_PATH := device/xiaomi/marble
 TARGET_BUILD_FULLY_SIGN := true
 include vendor/parasite/signatures/BoardConfigSign.mk
 
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
 # A/B
 AB_OTA_UPDATER := true
 
