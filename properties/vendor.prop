@@ -217,6 +217,9 @@ persist.vendor.rcs.singlereg.feature=1
 # SSR
 persist.vendor.ssr.restart_level=ALL_ENABLE
 
+# Sensors
+ro.vendor.sensors.notifier.light_sensors.primary=5
+
 # System properties
 ro.product.property_source_order=odm,vendor,product,system_ext,system
 
