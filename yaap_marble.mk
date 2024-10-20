@@ -17,14 +17,10 @@ PRODUCT_BRAND := POCO
 
 TARGET_BUILD_GAPPS := true
 
-PRODUCT_SYSTEM_NAME := marble
-PRODUCT_SYSTEM_DEVICE := marble
-
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_DEVICE=$(PRODUCT_SYSTEM_DEVICE) \
-    TARGET_PRODUCT=$(PRODUCT_SYSTEM_NAME) \
-    PRIVATE_BUILD_DESC="marble_global-user 14 UKQ1.230804.001 V816.0.12.0.UMRMIXM release-keys"
-
-BUILD_FINGERPRINT := POCO/marble_global/marble:14/UKQ1.230804.001/V816.0.12.0.UMRMIXM:user/release-keys
+    BuildDesc="marble_global-user 14 UKQ1.230804.001 V816.0.12.0.UMRMIXM release-keys" \
+    BuildFingerprint=POCO/marble_global/marble:14/UKQ1.230804.001/V816.0.12.0.UMRMIXM:user/release-keys \
+    DeviceName=marble \
+    DeviceProduct=marble_global
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
