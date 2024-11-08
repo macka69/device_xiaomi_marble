@@ -18,7 +18,7 @@ ANDROID_ROOT="${MY_DIR}/../../.."
 
 # Define the default patchelf version used to patch blobs
 # This will also be used for utility functions like FIX_SONAME
-export PATCHELF_VERSION=0_17_2
+export PATCHELF_VERSION=0_18
 
 HELPER="${ANDROID_ROOT}/tools/extract-utils/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
