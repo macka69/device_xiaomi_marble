@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-sleep 1
+sleep 3
 
 service call phone 185 i32 0 i32 0
 service call phone 186 i32 1 i32 0
