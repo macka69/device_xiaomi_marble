@@ -1,13 +1,13 @@
 #
-# Copyright (C) 2022-2023 The aospOS Project
+# Copyright (C) 2022-2023 The yaapOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_marble.mk
+    $(LOCAL_DIR)/yaap_marble.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_marble-user \
-    aosp_marble-userdebug \
-    aosp_marble-eng
+    yaap_marble-user \
+    yaap_marble-userdebug \
+    yaap_marble-eng
