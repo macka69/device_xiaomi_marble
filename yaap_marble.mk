@@ -9,13 +9,13 @@ $(call inherit-product, device/xiaomi/marble/device.mk)
 
 # Inherit from common lineage configuration
 $(call inherit-product, vendor/yaap/config/common_full_phone.mk)
-$(call inherit-product-if-exists, vendor/google/gms/config.mk)
 
 PRODUCT_NAME := yaap_marble
 PRODUCT_DEVICE := marble
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
 
+TARGET_BUILD_GAPPS := true
 
 PRODUCT_SYSTEM_NAME := marble
 PRODUCT_SYSTEM_DEVICE := marble
