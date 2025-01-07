@@ -1583,8 +1583,8 @@ system_ext/lib64/libimsmedia_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/li
 system_ext/lib64/vendor.qti.ImsRtpService-V1-ndk.so|c27f4e77d677a3e8d1c1c91ca1b40958dfb7f9d6
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so|961321653e924726bd01af6bfbb33c6740bc66af
 system_ext/lib64/vendor.qti.imsrtpservice@3.1.so|33008343e8ac15821278faecc1c234e8bea3fe2d
-system_ext/priv-app/QtiTelephony/QtiTelephony.apk|54f19b843a9d5a211029758b3329fcbb193b03d3
-system_ext/priv-app/ims/ims.apk|d1fdf059ff61d596e358cd930384eb22ba1e6537
+system_ext/priv-app/QtiTelephony/QtiTelephony.apk;REQUIRED=QtiTelephonyCompat|54f19b843a9d5a211029758b3329fcbb193b03d3
+system_ext/priv-app/ims/ims.apk;REQUIRED=QtiTelephonyCompat|d1fdf059ff61d596e358cd930384eb22ba1e6537
 system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|7a05751108e056e64037819a9fe2f74447c704e9
 vendor/app/IWlanService/IWlanService.apk|649a3ee3ceaa406a75268b7d3183761980b03d88
 vendor/bin/ATFWD-daemon|fdd62d6a09ef4673bc71405a7f26f72f8e322ffe
