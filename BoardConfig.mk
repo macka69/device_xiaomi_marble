@@ -55,7 +55,6 @@ AUDIO_FEATURE_ENABLED_PROXY_DEVICE := true
 
 BOARD_SUPPORTS_OPENSOURCE_STHAL := true
 
-TARGET_PROVIDES_AUDIO_HAL := true
 TARGET_USES_QCOM_MM_AUDIO := true
 
 # Bootloader
@@ -218,8 +217,7 @@ DEVICE_MANIFEST_SKUS := ukee
 DEVICE_MANIFEST_UKEE_FILES := \
     $(DEVICE_PATH)/vintf/manifest_ukee.xml \
     $(DEVICE_PATH)/vintf/manifest_marble.xml \
-    $(DEVICE_PATH)/vintf/manifest_no_nfc.xml \
-    hardware/qcom-caf/sm8450/audio/primary-hal/configs/common/manifest_non_qmaa.xml
+    $(DEVICE_PATH)/vintf/manifest_no_nfc.xml
 
 ODM_MANIFEST_SKUS += marble
 ODM_MANIFEST_MARBLE_FILES += $(DEVICE_PATH)/vintf/manifest_nfc.xml
