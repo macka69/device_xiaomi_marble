@@ -6,22 +6,14 @@
 # libqtigefar depends on libar-pal, which is a gnu makefile target
 
 # ACDB
-vendor/etc/acdbdata/Forte/Forte_acdb_cal.acdb
-vendor/etc/acdbdata/Forte/Forte_workspaceFileXml.qwsp
-vendor/etc/acdbdata/IDP_UPD/IDP_UPD_acdb_cal.acdb
-vendor/etc/acdbdata/IDP_UPD/IDP_UPD_workspaceFileXml.qwsp
+vendor/etc/acdbdata/Forte/Forte_acdb_cal.acdb:vendor/etc/acdbdata/ukee_mtp/Forte_acdb_cal.acdb
+vendor/etc/acdbdata/Forte/Forte_workspaceFileXml.qwsp:vendor/etc/acdbdata/ukee_mtp/Forte_workspaceFileXml.qwsp
 vendor/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.36_enpu2.pmd
 vendor/etc/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.10.pmd
 vendor/etc/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.36_enpu2_comp.pmd
 vendor/etc/acdbdata/nn_ns_models/fai__2.7.20_0.0__3.0.0_0.0__eai_1.36_enpu2.pmd
 vendor/etc/acdbdata/nn_ns_models/fai__2.7.2_0.0__3.0.0_0.0__eai_1.36_enpu2.pmd
 vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_1.36_enpu2.pmd
-vendor/etc/acdbdata/ukee_cdp/CDP_ukee_acdb_cal.acdb
-vendor/etc/acdbdata/ukee_cdp/CDP_ukee_workspaceFileXml.qwsp
-vendor/etc/acdbdata/ukee_mtp/MTP_ukee_acdb_cal.acdb
-vendor/etc/acdbdata/ukee_mtp/MTP_ukee_workspaceFileXml.qwsp
-vendor/etc/acdbdata/ukee_qrd/QRD_ukee_acdb_cal.acdb
-vendor/etc/acdbdata/ukee_qrd/QRD_ukee_workspaceFileXml.qwsp
 
 # ADSP - from diting V816.0.12.0.ULFMIXM
 vendor/bin/adsprpcd|4821003d01528b1fb5b7b409cd80e4307129ec9d
