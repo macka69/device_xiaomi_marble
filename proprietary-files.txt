@@ -130,18 +130,6 @@ vendor/lib64/libmcs.so;DISABLE_CHECKELF|67d8e69877a1e2c3dc66ae7d70f0040a7fb6de8a
 vendor/lib64/libpal_net_if.so|0b29fc5571632ad576976902f0a3b0b5ffe8e779
 vendor/lib64/libqtigefar.so;DISABLE_CHECKELF|19dcf2b7b69188741475dda267ed21c008a809f5
 
-# Audio configs
-vendor/etc/audio/sku_ukee/mixer_paths_overlay_dynamic.xml
-vendor/etc/audio/sku_ukee/mixer_paths_overlay_static.xml
-vendor/etc/audio/sku_ukee/mixer_paths_ukee_mtp.xml
-vendor/etc/audio/sku_ukee/resourcemanager_ukee_mtp.xml
-vendor/etc/audio_cloud_control_white_list.xml
-vendor/etc/backend_conf.xml
-vendor/etc/card-defs.xml
-vendor/etc/kvh2xml.xml
-vendor/etc/microphone_characteristics.xml
-vendor/etc/usecaseKvManager.xml
-
 # Audio firmware
 vendor/firmware/aw882xx_acf.bin
 
