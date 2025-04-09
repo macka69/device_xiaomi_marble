@@ -8,15 +8,12 @@
 $(call inherit-product, device/xiaomi/marble/device.mk)
 
 # Inherit from common AOSP configuration
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/clover/config/common_full_phone.mk)
 
 # Bootanimation
 TARGET_SCREEN_WIDTH := 1080
 
-# Recorder
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-
-PRODUCT_NAME := aosp_marble
+PRODUCT_NAME := clover_marble
 PRODUCT_DEVICE := marble
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
