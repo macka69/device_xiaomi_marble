@@ -60,6 +60,9 @@ BOARD_SUPPORTS_OPENSOURCE_STHAL := true
 
 TARGET_USES_QCOM_MM_AUDIO := true
 
+# Boot control
+ $(call soong_config_set, ufsbsg, ufsframework, bsg)
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := taro
 TARGET_NO_BOOTLOADER := true
