@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2022-2024 The LineageOS Project
+# Copyright (C) 2022-2023 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -7,14 +7,19 @@
 # Inherit from marble device
 $(call inherit-product, device/xiaomi/marble/device.mk)
 
-# Inherit from common lineage configuration
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit from common AOSP configuration
+$(call inherit-product, vendor/yaap/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_marble
+# Bootanimation
+TARGET_SCREEN_WIDTH := 1080
+
+PRODUCT_NAME := yaap_marble
 PRODUCT_DEVICE := marble
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := 23049PCD8G
+
+TARGET_BUILD_GAPPS := true
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="marble_global-user 15 AQ3A.241006.001 OS2.0.209.0.VMRMIXM release-keys" \
