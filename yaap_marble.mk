@@ -8,19 +8,18 @@
 $(call inherit-product, device/xiaomi/marble/device.mk)
 
 # Inherit from common AOSP configuration
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/yaap/config/common_full_phone.mk)
 
 # Bootanimation
 TARGET_SCREEN_WIDTH := 1080
 
-# Recorder
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-
-PRODUCT_NAME := aosp_marble
+PRODUCT_NAME := yaap_marble
 PRODUCT_DEVICE := marble
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := 23049PCD8G
+
+TARGET_BUILD_GAPPS := true
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="marble_global-user 15 AQ3A.241006.001 OS2.0.4.0.VMRMIXM release-keys" \
