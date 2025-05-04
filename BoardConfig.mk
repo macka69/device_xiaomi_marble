@@ -12,6 +12,9 @@ include vendor/xiaomi/marble/BoardConfigVendor.mk
 
 DEVICE_PATH := device/xiaomi/marble
 
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
 # A/B
 AB_OTA_PARTITIONS += \
     boot \
@@ -210,16 +213,19 @@ $(call soong_config_set, XIAOMI_TOUCH, HIGH_TOUCH_POLLING_PATH, /sys/devices/vir
 # VINTF
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 
-DEVICE_MANIFEST_SKUS := ukee
-DEVICE_MANIFEST_UKEE_FILES := \
+DEVICE_MANIFEST_FILE += \
     $(DEVICE_PATH)/vintf/manifest_ukee.xml \
-    $(DEVICE_PATH)/vintf/manifest_marble.xml \
+    $(DEVICE_PATH)/vintf/manifest_marble.xml
+
+ifeq ($(TARGET_NFC_SUPPORTED_SKUS),)
+DEVICE_MANIFEST_FILE += \
     $(DEVICE_PATH)/vintf/manifest_no_nfc.xml
+else
+ODM_MANIFEST_FILES += \
+    $(DEVICE_PATH)/vintf/manifest_nfc.xml
+endif
 
-ODM_MANIFEST_SKUS += marble
-ODM_MANIFEST_MARBLE_FILES += $(DEVICE_PATH)/vintf/manifest_nfc.xml
-
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
     hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml \
     vendor/yaap/config/device_framework_matrix.xml
