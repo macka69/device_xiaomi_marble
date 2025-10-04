@@ -220,3 +220,6 @@ vendor.usb.use_gadget_hal=1
 
 # WiFi
 wifi.aware.interface=wifi-aware0
+
+# Zygote
+ro.zygote.disable_gl_preload=1
