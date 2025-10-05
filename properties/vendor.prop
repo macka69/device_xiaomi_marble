@@ -110,9 +110,6 @@ drm.service.enabled=true
 persist.vendor.fingerprint.type=side
 persist.vendor.fingerprint.sensor_location=1080|920|210|local:4630946370515662721,1080|920|210|local:4630946480857061761
 
-# FRP
-ro.frp.pst=/dev/block/bootdevice/by-name/frp
-
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
 
