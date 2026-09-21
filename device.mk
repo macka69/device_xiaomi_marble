@@ -466,7 +466,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.vibrator.service
 
-$(call soong_config_set,qti_vibrator,effect_lib,libqtivibratoreffect.xiaomi)
+$(call soong_config_set,qti_vibrator,effect_lib,libqtivibratoreffect.marble)
 $(call soong_config_set,qti_vibrator,use_effect_stream,true)
 
 PRODUCT_COPY_FILES += \
